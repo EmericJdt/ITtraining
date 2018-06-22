@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- le fichier entrée du jeu -->
+<!-- il nous faut les balises des différentes classes principales -->
+<World xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BigBang.xsd">
+
+	<Regions number="">
+		<name></name>
+		<demographie>
+			<population_number></population_number>
+			<PIB currency=""></PIB>
+			<economyPotential currency=""></economyPotential>
+		</demographie>
+		<macroEvent_proba>
+			<super_depression></super_depression>
+			<natural_catastroph></natural_catastroph>
+			<super_growth></super_growth>
+		</macroEvent_proba>
+		<entities_number_per_Region></entities_number_per_Region>
+	</Regions>
+
+	<Corporation>
+		<name></name>
+		<entities number="">
+	        <shops number="">
+	          <shop location="" ID="">
+	            <account currency="" fees="" amount=""></account>
+	            <maxCapacity></maxCapacity>      <!-- la capacité max de stockage qu'elle peut avoir -->
+	          </shop>
+	        </shops>
+				<R_D_centers number="">
+					<R_D_center ID="">
+            <technologies_list>
+              <technology type="older/current/newer"></technology>
+            </technologies_list>
+            <funds></funds>
+            <costs></costs>
+						<delay></delay><!-- le temps minimum accordé apres une découverte (face aux autres joueurs) -->
+					</R_D_center>
+				</R_D_centers>
+				<factories number="">
+					<factory ID="">
+						<maxCapacity>"à remplir</maxCapacity><!-- le stock max qu'elle peut avoir a dispo -->
+						<effeciency>"à remplir"</effeciency>
+					</factory>
+				</factories>
+			</entities>
+			<main_account currency="" fees="" amount=""></main_account>
+	</Corporation>
+
+	<Transports type=""></Transports>	
+
+	<Bank>
+		<main_account currency="" fees="" amount=""></main_account>
+    <!-->		<transaction type="type"> 
+			<destination>
+				<address>
+		            <number>"à remplir"</number>
+		            <way type="type">"à remplir""à remplir"</way>
+		            <zip_code>"à remplir"</zip_code>
+		            <city>"à remplir"</city>
+		            <country>"à remplir"</country>
+		        </address>
+		    </destination>
+		    <value>"à remplir"</value>
+		    <source>"à remplir"</source> 
+		</transaction> <!-->
+	</Bank>
+
+	<TimeStamp>
+    <max_quarteur></max_quarteur>
+    <delay type="/tours"></delay>
+	</TimeStamp>
+
+</World>
+

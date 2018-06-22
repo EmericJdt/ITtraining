@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- les balises isolées (simples) -->
+  <xsd:element name="name" type="xsd:string"/>
+  <xsd:element name="maxCapacity" type="xsd:int"/>
+  <xsd:element name="delay" type="xsd:int"/>
+  <xsd:element name="effeciency" type="xsd:double"/>
+  <xsd:element name="entities_number_per_Region" type="xsd:int"/>
+  <xsd:element name="population_number" type="xsd:double"/>
+  <xsd:element name="super_depression" type="xsd:double"/>
+  <xsd:element name="natural_catastroph" type="xsd:double"/>
+  <xsd:element name="super_growth" type="xsd:double"/>
+  <xsd:element name="funds" type="xsd:double"/>
+  <xsd:element name="costs" type="xsd:double"/>
+  <xsd:element name="fees" type="xsd:double"/>
+  <!-- les balises isolées (simples) -->
+
+  <!-- les balises isolées (complexes) -->
+  <xsd:element name="main_account">
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="xsd:string">
+          <xsd:attribute name="fees" type="xsd:double"/>
+          <xsd:attribute name="currency" type="xsd:string"/>
+          <xsd:attribute name="amount" type="xsd:double"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="account">
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="xsd:string">
+          <xsd:attribute name="fees" type="xsd:double"/>
+          <xsd:attribute name="currency" type="xsd:string"/>
+          <xsd:attribute name="amount" type="xsd:double"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <!-- les balises isolées (complexes) -->
+
+  <!-- sous-balises (complexes) de <Régions> -->
+  <xsd:element name="demographie">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Population_number"/>
+        <xsd:element name="PIB">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="xsd:string">
+                <xsd:attribute name="currency" type="xsd:string"/>
+                <xsd:attribute name="amount" type="xsd:double"/>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="economyPotential">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="xsd:string">
+                <xsd:attribute name="currency" type="xsd:string"/>
+                <xsd:attribute name="amount" type="xsd:double"/>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="macroEvent_proba">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="super_depression"/>
+        <xsd:element ref="natural_catastroph"/>
+        <xsd:element ref="super_growth"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <!-- sous-balises (complexes) de <Régions> -->
+
+  <!-- sous-balises (complexes) de <Corporation> -->
+  <xsd:element name="technologies_list">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="technology">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="xsd:string">
+                <xsd:attribute name="type" type="xsd:string"/>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="shops">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="shop">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element ref="account"/>
+              <xsd:element ref="maxCapacity"/>
+            </xsd:sequence>
+            <xsd:attribute name="location" type="xsd:string"/>
+            <xsd:attribute name="ID" type="xsd:double"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="number" type="xsd:int"/>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="R_D_centers">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="R_D_center">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element ref="technologies_list"/>
+              <xsd:element ref="funds"/>
+              <xsd:element ref="costs"/>
+              <xsd:element ref="delay"/>
+            </xsd:sequence>
+            <xsd:attribute name="ID" type="xsd:double"/>
+          </xsd:complexType>
+        </xsd:element>     
+      </xsd:sequence>
+      <xsd:attribute name="number" type="xsd:int"/>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="factories">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="factory">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element ref="maxCapacity"/>
+              <xsd:element ref="effeciency"/>
+            </xsd:sequence>
+            <xsd:attribute name="ID" type="xsd:double"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="number" type="xsd:int"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="entities">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="shops"/>
+        <xsd:element ref="R_D_centers"/>
+        <xsd:element ref="factories"/>
+      </xsd:sequence>
+      <xsd:attribute name="number" type="xsd:int"/>
+    </xsd:complexType>
+  </xsd:element>
+  <!-- sous-balises (complexes) de <Corporation> -->
+
+  <!-- <Regions> -->
+  <xsd:element name="Regions">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="name"/>
+        <xsd:element ref="demographie"/>
+        <xsd:element ref="macroEvent_proba"/>
+        <xsd:element ref="entities_number_per_Region"/>
+      </xsd:sequence>
+      <xsd:attribute name="number" type="xsd:int"/>
+    </xsd:complexType>
+  </xsd:element>
+  <!-- <Regions> -->
+
+  <!-- <Corporation> -->
+  <xsd:element name="Corporation">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="name"/>
+        <xsd:element ref="entities"/>
+        <xsd:element ref="account"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <!-- <Corporation> -->
+
+  <!-- <Bank> -->
+  <xsd:element name="Bank">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="main_account"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <!-- <Bank> -->
+  
+  <!--> Transport -->
+  <xsd:element name="Transport">
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="xsd:string">
+          <xsd:attribute name="type">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="maritime"/>
+                <xsd:enumeration value="rail"/>
+                <xsd:enumeration value="air"/>
+                <xsd:enumeration value="road"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:attribute>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <!--> Transport -->
+  
+  <!-- <TimeStamp> -->
+  <xsd:element name="TimeStamp">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="max_quarter" type="xsd:int"/>
+        <xsd:element name="delay"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <!-- <TimeStamp> -->
+
+  <!-- <World> -->
+  <xsd:element name="World">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Regions"/>
+        <xsd:element ref="Corporation"/>
+        <xsd:element ref="Bank"/>
+        <xsd:element ref="TimeStamp"/>
+        <xsd:element ref="Transport"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <!-- <World> -->
+
+</xsd:schema>
