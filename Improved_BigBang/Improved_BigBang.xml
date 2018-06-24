@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- le fichier entrée du jeu -->
+<!-- il nous faut les balises des différentes classes principales -->
+<World xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BigBang.xsd">
+
+	<Region number="" >
+		<name></name>
+		<demographie>
+			<populationNumber></populationNumber>
+			<PIB currency=""></PIB>
+			<economyPotential currency=""></economyPotential>
+		</demographie>
+		<macroEventProba>
+			<superDepression></superDepression>
+			<naturalCatastroph></naturalCatastroph>
+			<superGrowth></superGrowth>
+		</macroEventProba>
+		<entitiesNumber></entitiesNumber>
+	</Region>
+
+	<Corporation>
+		<name></name>
+		<entities number="">
+	        <shops number="">
+	          <shop location="" ID="">
+	            <account currency="" fees="" amount=""></account>
+	            <maxCapacity></maxCapacity>      <!-- la capacité max de stockage qu'elle peut avoir -->
+	          </shop>
+	        </shops>
+				<RDCenters number="">
+					<RDCenter ID="">
+            <technologiesList>
+              <technology type="older/current/newer"></technology>
+            </technologiesList>
+            <funds></funds>
+            <costs></costs>
+						<delay></delay><!-- le temps minimum accordé apres une découverte (face aux autres joueurs) -->
+					</RDCenter>
+				</RDCenters>
+				<factories number="">
+					<factory ID="">
+						<maxCapacity>"à remplir</maxCapacity><!-- le stock max qu'elle peut avoir a dispo -->
+						<effeciency>"à remplir"</effeciency>
+					</factory>
+				</factories>
+			</entities>
+			<mainAccount currency="" fees="" amount=""></mainAccount>
+	</Corporation>
+
+	<Transports type=""></Transports>	
+
+	<Bank>
+		<mainAccount currency="" fees="" amount=""></mainAccount>
+    <!-->		<transaction type="type"> 
+			<destination>
+				<address>
+		            <number>"à remplir"</number>
+		            <way type="type">"à remplir""à remplir"</way>
+		            <zip_code>"à remplir"</zip_code>
+		            <city>"à remplir"</city>
+		            <country>"à remplir"</country>
+		        </address>
+		    </destination>
+		    <value>"à remplir"</value>
+		    <source>"à remplir"</source> 
+		</transaction> <!-->
+	</Bank>
+
+	<TimeStamp>
+    <maxQuarteur></maxQuarteur>
+    <delay type="tour"></delay>
+	</TimeStamp>
+  <Global>
+    <product id="1">
+      <name></name>
+      <potential>9</potential>
+      <refcost id="1">100000</refcost>
+      <refcost id="2">1000000</refcost>
+      <refcost id="3">10000000</refcost>
+      <refcost id="4">100000000</refcost>
+      <refcost id="5">200000000</refcost>
+      <refcost id="6">400000000</refcost>
+      <refcost id="7">600000000</refcost>
+      <refcost id="8">800000000</refcost>
+      <refcost id="9">1000000000</refcost>
+    </product>
+    <product id="2">
+      <name></name>
+      <potential>9</potential>
+      <refcost id="1">100000</refcost>
+      <refcost id="2">1000000</refcost>
+      <refcost id="3">10000000</refcost>
+      <refcost id="4">100000000</refcost>
+      <refcost id="5">200000000</refcost>
+      <refcost id="6">400000000</refcost>
+      <refcost id="7">600000000</refcost>
+      <refcost id="8">800000000</refcost>
+      <refcost id="9">1000000000</refcost>
+    </product>
+  </Global>
+
+</World>
+

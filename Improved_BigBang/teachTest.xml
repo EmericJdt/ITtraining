@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- le fichier entrée du jeu -->
+<!-- il nous faut les balises des différentes classes principales -->
+<World xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BigBang.xsd">
+
+	<Region id="1">
+		<name>USA</name>
+		<demographie>
+			<populationNumber>300</populationNumber>
+			<PIB currency="$">18570</PIB>
+			<economyPotential currency="$">5</economyPotential>
+		</demographie>
+		<macroEventProba>
+			<superDepression>0.10</superDepression>
+			<naturalCatastroph>0.10</naturalCatastroph>
+			<superGrowth>0.02</superGrowth>
+		</macroEventProba>
+		<entitiesNumber>1000</entitiesNumber>
+	</Region>
+	<Region id="2">
+		<name>UE</name>
+		<demographie>
+			<populationNumber>500</populationNumber>
+			<PIB currency="$">18412</PIB>
+			<economyPotential currency="$">7</economyPotential>
+		</demographie>
+		<macroEventProba>
+			<superDepression>0.05</superDepression>
+			<naturalCatastroph>0.01</naturalCatastroph>
+			<superGrowth>0.01</superGrowth>
+		</macroEventProba>
+		<entitiesNumber>1000</entitiesNumber>
+	</Region>	
+	<Region id="3">
+		<name>JP</name>
+		<demographie>
+			<populationNumber>130</populationNumber>
+			<PIB currency="">4000</PIB>
+			<economyPotential currency="$">2</economyPotential>
+		</demographie>
+		<macroEventProba>
+			<superDepression>0.2</superDepression>
+			<naturalCatastroph>0.2</naturalCatastroph>
+			<superGrowth>0.01</superGrowth>
+		</macroEventProba>
+		<entitiesNumber>100</entitiesNumber>
+	</Region>
+	<Corporation id ="1">
+		<name>APPEL</name>
+		<entities number="0">
+	        <shops number="0">
+	          <shop location="" ID="">
+	            <maxCapacity></maxCapacity>      <!-- la capacité max de stockage qu'elle peut avoir -->
+	          </shop>
+	        </shops>
+				<RDCenters number="">
+					<RDCenter ID="">
+            <technologiesList>
+              <technology type="older/current/newer"></technology>
+            </technologiesList>
+            <funds></funds>
+            <costs></costs>
+						<delay></delay><!-- le temps minimum accordé apres une découverte (face aux autres joueurs) -->
+					</RDCenter>
+				</RDCenters>
+				<factories number="">
+					<factory ID="">
+						<maxCapacity>"à remplir</maxCapacity><!-- le stock max qu'elle peut avoir a dispo -->
+						<effeciency>"à remplir"</effeciency>
+					</factory>
+				</factories>
+			</entities>
+			<mainAccount currency="$" fees="" amount="50000000"></mainAccount>
+	</Corporation>
+<Corporation id ="2">
+		<name></name>
+		<entities number="">
+	        <shops number="">
+	          <shop location="" ID="">
+	            <maxCapacity></maxCapacity>      <!-- la capacité max de stockage qu'elle peut avoir -->
+	          </shop>
+	        </shops>
+				<RDCenters number="">
+					<RDCenter ID="">
+            <technologiesList>
+              <technology type="older/current/newer"></technology>
+            </technologiesList>
+            <funds></funds>
+            <costs></costs>
+						<delay></delay><!-- le temps minimum accordé apres une découverte (face aux autres joueurs) -->
+					</RDCenter>
+				</RDCenters>
+				<factories number="">
+					<factory ID="">
+						<maxCapacity>"à remplir</maxCapacity><!-- le stock max qu'elle peut avoir a dispo -->
+						<effeciency>"à remplir"</effeciency>
+					</factory>
+				</factories>
+			</entities>
+			<mainAccount currency="" fees="" amount=""></mainAccount>
+	</Corporation>
+	<Corporation  id ="3">
+		<name></name>
+		<entities number="">
+	        <shops number="">
+	          <shop location="" ID="">
+	            <maxCapacity></maxCapacity>      <!-- la capacité max de stockage qu'elle peut avoir -->
+	          </shop>
+	        </shops>
+				<RDCenters number="">
+					<RDCenter ID="">
+            <technologiesList>
+              <technology type="older/current/newer"></technology>
+            </technologiesList>
+            <funds></funds>
+            <costs></costs>
+						<delay></delay><!-- le temps minimum accordé apres une découverte (face aux autres joueurs) -->
+					</RDCenter>
+				</RDCenters>
+				<factories number="">
+					<factory ID="">
+						<maxCapacity>"à remplir</maxCapacity><!-- le stock max qu'elle peut avoir a dispo -->
+						<effeciency>"à remplir"</effeciency>
+					</factory>
+				</factories>
+			</entities>
+			<mainAccount currency="" fees="" amount=""></mainAccount>
+	</Corporation>
+	<Transports type=""></Transports>	
+
+	<Bank>
+		<mainAccount currency="$" fees="" amount="100000000000"></mainAccount>
+    <!-->		<transaction type="type"> 
+			<destination>
+				<address>
+		            <number>"à remplir"</number>
+		            <way type="type">"à remplir""à remplir"</way>
+		            <zip_code>"à remplir"</zip_code>
+		            <city>"à remplir"</city>
+		            <country>"à remplir"</country>
+		        </address>
+		    </destination>
+		    <value>"à remplir"</value>
+		    <source>"à remplir"</source> 
+		</transaction> <!-->
+	</Bank>
+
+	<TimeStamp>
+    <maxQuarteur>20</maxQuarteur>
+    <delay type="tour"></delay>
+	</TimeStamp>
+<Global>
+	<product id="1">
+		<name>X</name>
+		<potential>9</potential>
+		<refcost id="1">100000</refcost>
+		<refcost id="2">1000000</refcost>
+		<refcost id="3">10000000</refcost>
+		<refcost id="4">100000000</refcost>
+		<refcost id="5">200000000</refcost>
+		<refcost id="6">400000000</refcost>
+		<refcost id="7">600000000</refcost>
+		<refcost id="8">800000000</refcost>
+		<refcost id="9">1000000000</refcost>
+	</product>
+	<product id="2">
+		<name>Y</name>
+		<potential>9</potential>
+		<refcost id="1">100000</refcost>
+		<refcost id="2">1000000</refcost>
+		<refcost id="3">10000000</refcost>
+		<refcost id="4">100000000</refcost>
+		<refcost id="5">200000000</refcost>
+		<refcost id="6">400000000</refcost>
+		<refcost id="7">600000000</refcost>
+		<refcost id="8">800000000</refcost>
+		<refcost id="9">1000000000</refcost>
+	</product>
+</Global>
+</World>
