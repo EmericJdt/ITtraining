@@ -3,18 +3,20 @@
 
 class Banks
 {
-	struct mainAccountStructure
+	struct borrow
 	{
-		double m_amount = 10500;
-		std::string m_currency = "dollar";
-		double m_fees = 0.05;
+		double m_fees;
+		double m_amount;
+		double m_repaymentDelay;
+		double m_repaymentDelayed;
 	};
-
 public:
-	Banks(mainAccountStructure mainAccount);
+	Banks();
+	Banks(double amount, std::string currency);
 	void validParser();
-
+	void GetDataBanks(double amount, std::string currency);
 private:
-	struct mainAccountStructure m_mainAccount;
+	double m_amount;
+	std::string m_currency;
 	std::vector<Banks*> BanksTab;
 };

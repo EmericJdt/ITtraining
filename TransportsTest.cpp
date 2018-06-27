@@ -3,19 +3,12 @@
 #include <vector>
 
 using namespace std;
-
-Transports::Transports(std::string type, double costs): m_transportType(type), m_costs(costs)
+void Transports::validParser(std::string type, double costs, int delay)
 {
-	TransportsTab.push_back(new Transports(m_transportType, m_costs));
-	validParser;
-	//vector<Transports*>::iterator it;
-}
-
-void Transports::validParser(std::string type, double costs)
-{
-	Transports TransportsTesting("maritime", 49.99);
+	Transports TransportsTesting(m_transportType, m_transportCosts, m_transportDelay);
 	if (TransportsTab.begin == TransportsTesting)
 		cout << "OK" << endl;
 	else
 		cout << "ERROR" << endl;
 }
+

@@ -5,26 +5,28 @@ class Region
 {
 	struct demographieStructure
 	{
-		double m_populationNumber = 325700000;
-		double m_PIB = 18570000000;
-		std::string m_currency = "dollar";
+		double populationNumber;
+		double PIB;
+		std::string currency;
 	};
-
 	struct macroEventProbaStructure
 	{
-		double m_superDepression = 0.1;
-		double m_naturalCatastroph = 0.01;
-		double m_superGrowth = 0.2;
+		double superDepression;
+		double naturalCatastroph;
+		double superGrowth;
 	};
 public:
-	Region(char* name, double id, demographieStructure demographie, macroEventProbaStructure macroEventProba, int entitiesNumber);
+	Region();
+	Region(std::string name, double id, demographieStructure demographie, macroEventProbaStructure macroEventProba, int entitiesNumber);
 	void populationNumberVariations(demographieStructure demographie);
 	void validParser();
+	void GetDataRegion(std::string name, double id, demographieStructure demographie, 
+		macroEventProbaStructure macroEventProba, int entitiesNumber);
 private:
-	char* m_name[100];
-	double m_id = 536789535;
+	std::string m_name;
+	double m_id;
 	struct demographieStructure m_demographie;
 	struct macroEventProbaStructure m_macroEventProba;
-	int m_entitiesNumber = 10;
+	int m_entitiesNumber;
 	std::vector<Region*> RegionsTab;
 };
