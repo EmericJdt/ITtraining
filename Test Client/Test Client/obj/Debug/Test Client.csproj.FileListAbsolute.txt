@@ -1,0 +1,12 @@
+C:\Users\emeri\source\repos\Test Client\Test Client\bin\Debug\Test Client.exe.config
+C:\Users\emeri\source\repos\Test Client\Test Client\bin\Debug\Test Client.exe
+C:\Users\emeri\source\repos\Test Client\Test Client\bin\Debug\Test Client.pdb
+C:\Users\emeri\source\repos\Test Client\Test Client\obj\Debug\Test Client.csprojAssemblyReference.cache
+C:\Users\emeri\source\repos\Test Client\Test Client\obj\Debug\Test_Client.Properties.Resources.resources
+C:\Users\emeri\source\repos\Test Client\Test Client\obj\Debug\Test Client.csproj.GenerateResource.cache
+C:\Users\emeri\source\repos\Test Client\Test Client\obj\Debug\Test Client.csproj.CoreCompileInputs.cache
+C:\Users\emeri\source\repos\Test Client\Test Client\obj\Debug\Test Client.exe
+C:\Users\emeri\source\repos\Test Client\Test Client\obj\Debug\Test Client.pdb
+C:\Users\emeri\source\repos\Test Client\Test Client\obj\Debug\Test_Client.IT_SIM.resources
+C:\Users\emeri\source\repos\Test Client\Test Client\obj\Debug\Test_Client.WorldCreator.resources
+C:\Users\emeri\source\repos\Test Client\Test Client\obj\Debug\Test_Client.Actions.resources
